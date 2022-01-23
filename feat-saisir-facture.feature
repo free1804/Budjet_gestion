@@ -4,8 +4,7 @@ Feature: FEAT : Saisir facture
   As a consigneure
   I want to entrer les montants, leur date, leur origine et qui a payé
 
-  @ORPHAN
-  Scenario: saisir une facture
+  Scenario: saisir le montant d'une facture
     Given un contributeur ayant payé une épicerie
     And il revient à la maison avec sa facture
     When il la donne au consignateur pour qu'il la saisisse
@@ -13,4 +12,3 @@ Feature: FEAT : Saisir facture
     And l'établissement de l'achat
     And le montant en dollars
     And le nom de la personne qui a payé l'achat
-    
