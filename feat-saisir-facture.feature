@@ -9,7 +9,7 @@ Feature: FEAT : Saisir facture
     And il revient à la maison avec sa facture
     And il la donne au consignateur pour qu'il saisisse
     When le consignateur saisie <information> et la <valeur>
-    
+    Then le total de contribution pour cette personne est mis à jour
     Examples:
       | information   | valeur          |
       | établissement | IGA             |
