@@ -1,4 +1,4 @@
-Feature: FEAT : Saisir facture
+Feature: Saisir facture
 
   In Order to compiler le montant des factures qui entrent
   As a consigneure
@@ -23,6 +23,7 @@ Feature: FEAT : Saisir facture
     When il confirme la saisie de tous les détails
     Then le <montant> est ajouté au <solde> courant
     And le <total> de contribution a été ajouté du montant
+    
     Examples:
-      |montant|solde| total|
-      | 345   |55   | 400  |
+      | montant | solde | total |
+      | 345     | 55    | 400   |
