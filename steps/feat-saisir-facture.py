@@ -8,7 +8,7 @@ def step_impl(context):
     """
     :type context: behave.runner.Context
     """
-    raise NotImplementedError(u'STEP: Given un contributeur ayant payé une épicerie')
+    print(u'STEP: Given un contributeur ayant payé une épicerie')
 
 
 @step("il revient à la maison avec sa facture")
@@ -16,7 +16,7 @@ def step_impl(context):
     """
     :type context: behave.runner.Context
     """
-    raise NotImplementedError(u'STEP: And il revient à la maison avec sa facture')
+    print(u'STEP: And il revient à la maison avec sa facture')
 
 
 @step("il la donne au consignateur pour qu'il saisisse")
@@ -24,7 +24,7 @@ def step_impl(context):
     """
     :type context: behave.runner.Context
     """
-    raise NotImplementedError(u'STEP: And il la donne au consignateur pour qu\'il saisisse')
+    print(u'STEP: And il la donne au consignateur pour qu\'il saisisse')
 
 
 @when("le consignateur saisie (?P<information>.+) et la (?P<valeur>.+)")
@@ -34,7 +34,7 @@ def step_impl(context, information, valeur):
     :type information: str
     :type valeur: str
     """
-    raise NotImplementedError(u'STEP: When le consignateur saisie <information> et la <valeur>')
+    print(f"STEP: When le consignateur saisie l'information de :  {information} qui est :  {valeur}")
 
 
 @then("le total de contribution pour cette personne est mis à jour")
@@ -42,15 +42,21 @@ def step_impl(context):
     """
     :type context: behave.runner.Context
     """
-    raise NotImplementedError(u'STEP: Then le total de contribution pour cette personne est mis à jour')
+    print(u'STEP: Then le total de contribution pour cette personne est mis à jour')
 
+@given("une contribution saisie par le consignateur")
+def step_impl(context):
+    """
+    :type context: behave.runner.Context
+    """
+    print(u'STEP: Given une contribution saisie par le consignateur')
 
 @when("il confirme la saisie de tous les détails")
 def step_impl(context):
     """
     :type context: behave.runner.Context
     """
-    raise NotImplementedError(u'STEP: When il confirme la saisie de tous les détails')
+    print(u'STEP: When il confirme la saisie de tous les détails')
 
 
 @then("le (?P<montant>.+) est ajouté au (?P<solde>.+) courant")
@@ -60,7 +66,7 @@ def step_impl(context, montant, solde):
     :type montant: str
     :type solde: str
     """
-    raise NotImplementedError(u'STEP: Then le <montant> est ajouté au <solde> courant')
+    print(f"STEP: Then le montant : {montant} est ajouté au solde : {solde} courant")
 
 
 @step("le (?P<total>.+) de contribution a été ajouté du montant")
@@ -69,4 +75,6 @@ def step_impl(context, total):
     :type context: behave.runner.Context
     :type total: str
     """
-    raise NotImplementedError(u'STEP: And le <total> de contribution a été ajouté du montant')
+    print(f"STEP: And le total : {total} de contribution a été ajouté du montant")
+
+

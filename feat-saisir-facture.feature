@@ -18,9 +18,8 @@ Feature: FEAT : Saisir facture
       | date          | 12 janvier 2022 |
       | montant       | 233             |
 
-  @ORPHAN
   Scenario Outline: La contribution d'une personne est mise à jour
-    Givent une contribution saisie par le consignateur
+    Given une contribution saisie par le consignateur
     When il confirme la saisie de tous les détails
     Then le <montant> est ajouté au <solde> courant
     And le <total> de contribution a été ajouté du montant
