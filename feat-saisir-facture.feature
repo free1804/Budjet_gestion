@@ -13,13 +13,6 @@ Feature: FEAT : Saisir facture
     And le montant en dollars
     And le nom de la personne qui a payé l'achat
 
-  Scenario: Saisir le nom de facture
-    Given un contributeur ayant payé une épicerie
-    And il revient à la maison avec sa facture
-    When il la donne au consignateur pour qu'il la saisisse
-    Then le consignateur saisie le nom de l'établissement de la facture
-
-  @ORPHAN
   Scenario Outline: Saisir la facture
     Given un contributeur ayant payé une épicerie
     And il revient à la maison avec sa facture
@@ -27,8 +20,8 @@ Feature: FEAT : Saisir facture
     When le consignateur saisie <information> et la <valeur>
     
     Examples:
-      |information  |valeur          |
-      |établissement|IGA             |
-      | personne    | Éric           |
-      | date        | 12 janvier 2022|
-      | montant     | 233            |
+      | information   | valeur          |
+      | établissement | IGA             |
+      | personne      | Éric            |
+      | date          | 12 janvier 2022 |
+      | montant       | 233             |
